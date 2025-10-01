@@ -33,6 +33,10 @@
             cursor:pointer;
             margin-top:20px;
         }
+        form{
+            margin:auto;
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -45,56 +49,56 @@
     <main>
         <h2>Formulario de pedido</h2>
         <p>Rellene el siguiente formulario para realizar su pedido:</p>
-    <form method="post" style="font-family: Arial, sans-serif; margin: auto;">
+    <form method="post">
         <h4>Información del cliente</h4>
         <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" required><br><br>
+        <input type="text" name="nombre" required placeholder="Nombre"><br><br>
         <label for="apellidos">Apellidos: </label>
-        <input type="text" name="apellidos" required><br><br>
+        <input type="text" name="apellidos" required placeholder="Apellidos"><br><br>
         <label for="correo">Correo electrónico: </label>
-        <input type="email" name="correo" required><br><br>
+        <input type="email" name="correo" required placeholder="Correo electrónico"><br><br>
         <label for="telefono">Teléfono: </label>
-        <input type="tel" name="telefono" required><br><br>
-        <h4>Dirección de envio</h4>
+        <input type="tel" name="telefono" required placeholder="Teléfono"><br><br>
+        <h4>Dirección de envío</h4>
         <label for="pais">País: </label>
-        <input type="text" name="pais" required><br><br>
+        <input type="text" name="pais" required placeholder="País"><br><br>
         <label for="ciudad">Ciudad: </label>   
-        <input type="text" name="ciudad" required><br><br>
+        <input type="text" name="ciudad" required placeholder="Ciudad"><br><br>
         <label for="codigo">Código postal: </label>
-        <input type="number" name="codigo" required><br><br>
+        <input type="number" name="codigo" required placeholder="Código postal"><br><br>
         <label for="direccion">Dirección de envío: </label>
-        <input type="text" name="direccion" required><br><br>
+        <input type="text" name="direccion" required placeholder="Dirección"><br><br>
                 <label for="instrucciones">Instrucciones especiales: </label><br>
         <textarea name="instrucciones" rows="4" cols="50" placeholder="Escriba aquí cualquier instrucción especial para la entrega"></textarea><br><br>
         <h4>Detalles del pedido</h4>
         <label for="producto">Producto a imprimir: </label>
-        <input type="file" name="producto" required><br><br>
+        <input type="file" name="producto" required placeholder="Archivo .stl, .3mf, obj"><br><br>
         <label for="material">Material: </label>
-        <select name="material" required>
+        <select name="material" required title="Elige el material">
             <option value="PLA">PLA</option>
             <option value="ABS">ABS</option>
             <option value="PETG">PETG</option>
         </select><br><br>
         <label for="color">Color: </label>
-        <select name="color" required>
+        <select name="color" required title="Elige el color">
             <option value="blanco">Blanco</option>
             <option value="colores originales">Colores originales</option>
             <option value="personalizado">Personalizado</option>
             <input type="text" name="colorpersonalizado" placeholder="Solo para color personalizado">
         </select><br><br>
         <label for="cantidad">Cantidad: </label>
-        <input type="number" name="cantidad" min="1" required><br><br>
+        <input type="number" name="cantidad" min="1" required placeholder="Cantidad"><br><br>
         <h4>Información de pago</h4>
         <label for="tarjeta">Número de tarjeta de crédito: </label>
-        <input type="number" name="tarjeta" required><br><br>
+        <input type="number" name="tarjeta" required placeholder="Número de tarjeta de credito"><br><br>
         <label for="vencimiento">Fecha de vencimiento: </label>
-        <input type="number" name="vencimiento" required>
+        <input type="number" name="vencimiento" required placeholder="Año de vencimiento">
         <label for="vencimientomes">/</label>
-        <input type="number" name="vencimientomes" required><br><br>
+        <input type="number" name="vencimientomes" required placeholder="Mes de vencimiento"><br><br>
         <label for="cvv">CVV: </label>
-        <input type="number" name="cvv" required><br><br>
+        <input type="number" name="cvv" required placeholder="CVV"><br><br>
         <h4>Aceptación de términos y condiciones</h4>
-        <input type="checkbox" name="terminos" required>
+        <input type="checkbox" name="terminos" required placeholder="Terminos y condiciones">
         <label for="terminos">He leído y acepto los términos y condiciones</label><br><br>
         <button type="submit">Enviar Pedido</button>
         <button type="reset">Limpiar</button>
