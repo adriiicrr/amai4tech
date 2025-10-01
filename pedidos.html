@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>amai4tech-pedidos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        header{
+            text-align: center;
+            background-color:darkturquoise;
+            padding: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+            text-decoration: underline dotted;
+            text-underline-position: under;
+        }
+        header p{
+            font-size: 16px; 
+            display: inline;
+            text-decoration:none;
+            margin:15px;
+        }
+        button{
+            background-color:darkturquoise;
+            color:white;
+            border:none;
+            padding:10px;
+            font-size:20px;
+            border-radius:10px;
+            cursor:pointer;
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <p>Contacto</p>
+        <p>Terminos de privacidad</p>
+        <p>Sobre Nosotros</p>
+        <h1>Amai4tech</h1>
+    </header>
+    <main>
+        <h2>Formulario de pedido</h2>
+        <p>Rellene el siguiente formulario para realizar su pedido:</p>
+    <form method="post" style="font-family: Arial, sans-serif; margin: auto;">
+        <h4>Información del cliente</h4>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" required><br><br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" required><br><br>
+        <label for="correo">Correo electrónico: </label>
+        <input type="email" name="correo" required><br><br>
+        <label for="telefono">Teléfono: </label>
+        <input type="tel" name="telefono" required><br><br>
+        <h4>Dirección de envio</h4>
+        <label for="pais">País: </label>
+        <input type="text" name="pais" required><br><br>
+        <label for="ciudad">Ciudad: </label>   
+        <input type="text" name="ciudad" required><br><br>
+        <label for="codigo">Código postal: </label>
+        <input type="number" name="codigo" required><br><br>
+        <label for="direccion">Dirección de envío: </label>
+        <input type="text" name="direccion" required><br><br>
+                <label for="instrucciones">Instrucciones especiales: </label><br>
+        <textarea name="instrucciones" rows="4" cols="50" placeholder="Escriba aquí cualquier instrucción especial para la entrega"></textarea><br><br>
+        <h4>Detalles del pedido</h4>
+        <label for="producto">Producto a imprimir: </label>
+        <input type="file" name="producto" required><br><br>
+        <label for="material">Material: </label>
+        <select name="material" required>
+            <option value="PLA">PLA</option>
+            <option value="ABS">ABS</option>
+            <option value="PETG">PETG</option>
+        </select><br><br>
+        <label for="color">Color: </label>
+        <select name="color" required>
+            <option value="blanco">Blanco</option>
+            <option value="colores originales">Colores originales</option>
+            <option value="personalizado">Personalizado</option>
+            <input type="text" name="colorpersonalizado" placeholder="Solo para color personalizado">
+        </select><br><br>
+        <label for="cantidad">Cantidad: </label>
+        <input type="number" name="cantidad" min="1" required><br><br>
+        <h4>Información de pago</h4>
+        <label for="tarjeta">Número de tarjeta de crédito: </label>
+        <input type="number" name="tarjeta" required><br><br>
+        <label for="vencimiento">Fecha de vencimiento: </label>
+        <input type="number" name="vencimiento" required>
+        <label for="vencimientomes">/</label>
+        <input type="number" name="vencimientomes" required><br><br>
+        <label for="cvv">CVV: </label>
+        <input type="number" name="cvv" required><br><br>
+        <h4>Aceptación de términos y condiciones</h4>
+        <input type="checkbox" name="terminos" required>
+        <label for="terminos">He leído y acepto los términos y condiciones</label><br><br>
+        <button type="submit">Enviar Pedido</button>
+        <button type="reset">Limpiar</button>
+    </form>
+
+    </main>
+</body>
+</html>
